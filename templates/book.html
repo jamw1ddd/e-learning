@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+      <section id="books" class="section blog" aria-label="books">
+        <div class="container">
+
+          <p class="section-subtitle">Elektron Kitoblar</p>
+          <h2 class="h2 section-title">Dasturlash faniga oid eng so‘nggi elektron qo‘llanmalar</h2>
+
+          <ul class="grid-list">
+            {% for kitob in kitoblar %}
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 370; --height: 220;">
+                  <img src="{{ kitob.rasm.url }}" width="370" height="220" loading="lazy" alt="{{ kitob.nomi }}"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <h3 class="h3">
+                    <span class="card-title">{{ kitob.nomi }}</span>
+                  </h3>
+
+                  <p class="card-text">
+                    {{ kitob.tavsif }}
+                  </p>
+
+                  <a href="{{ kitob.fayl.url }}" class="btn has-before" download>
+                    <span class="span">Yuklab olish</span>
+                    <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
+                  </a>
+                </div>
+
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </section>
+
+{%endblock content%}

@@ -1,0 +1,272 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tag
+  -->
+  <title>EduWeb - The Best Program to Enroll for Exchange</title>
+  <meta name="title" content="EduWeb - The Best Program to Enroll for Exchange">
+  <meta name="description" content="This is an education html template made by codewithsadee">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="{%static './favicon.svg'%}" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="{%static './assets/css/style.css'%}">
+  <style>
+  .search-container {
+    margin-top: 10px;
+    padding: 0.5rem;
+    background: white;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+    position: absolute;
+    top: 70px; /* header balandligiga qarab sozlang */
+    right: 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .input-field {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+</style>
+
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="{%static './assets/images/hero-bg.svg'%}">
+  <link rel="preload" as="image" href="{%static './assets/images/hero-banner-1.jpg'%}">
+  <link rel="preload" as="image" href="{%static './assets/images/hero-banner-2.jpg'%}">
+  <link rel="preload" as="image" href="{%static './assets/images/hero-shape-1.svg'%}">
+  <link rel="preload" as="image" href="{%static './assets/images/hero-shape-2.png'%}">
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="{%static './assets/images/logo.svg'%}" width="162" height="50" alt="EduWeb logo">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="wrapper">
+          <a href="#" class="logo">
+            <img src="{%static './assets/images/logo.svg'%}" width="162" height="50" alt="EduWeb logo">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+        <li class="navbar-item">
+            <a href="{%url 'home'%}#home" class="navbar-link" data-nav-link>Bosh sahifa</a>
+        </li>
+
+        <li class="navbar-item">
+            <a href="{%url 'home'%}#about" class="navbar-link" data-nav-link>Biz haqimizda</a>
+        </li>
+
+        <li class="navbar-item">
+            <a href="{%url 'home'%}#courses" class="navbar-link" data-nav-link>Kurslar</a>
+        </li>
+
+        <li class="navbar-item">
+            <a href="{%url 'home'%}#blog" class="navbar-link" data-nav-link>Elektron qo'llanmalar</a>
+        </li>
+
+        {% comment %} <li class="navbar-item">
+            <a href="#footer" class="navbar-link" data-nav-link>Aloqa</a>
+        </li> {% endcomment %}
+
+        </ul>
+
+
+      </nav>
+
+      <div class="header-actions">
+
+        {% comment %} <button class="header-action-btn" aria-label="toggle search" title="Qidiruvni ochish">
+        <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <!-- Qidiruv inputi (bosilganda ko‘rinadi) -->
+        <div class="search-container" id="searchContainer" style="display: none;">
+        <input type="text" id="searchInput" class="input-field" placeholder="Qidiruv...">
+        </div> {% endcomment %}
+
+        <a href="#footer" class="btn has-before">
+          <span class="span">Aloqa</span>
+
+          <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+        </a>
+
+        <button class="header-action-btn" aria-label="open menu" data-nav-toggler>
+          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+  {%block content%}
+
+  {%endblock content%}
+    <footer class="footer" style="background-image: url({% static 'assets/images/footer-bg.png' %})">
+
+    <div class="footer-top section">
+        <div class="container grid-list">
+
+        <div class="footer-brand">
+
+            <a href="/" class="logo">
+            <img src="{% static 'assets/images/logo-light.svg' %}" width="162" height="50" alt="EduWeb logosi">
+            </a>
+
+            <p class="footer-brand-text">
+            EduDev barcha bilim darajalari uchun mo‘ljallangan e-learning resurslarini taklif etadi. Boshlovchi yoki tajribali o‘rganuvchi bo‘lishingizdan qat'i nazar, bizning kurslarimiz sizga o‘quv maqsadlaringizga osongina erishishga yordam beradi.
+            </p>
+
+            <div class="wrapper">
+            <span class="span">Manzil:</span>
+            <address class="address">Toshkent shahri, Chilonzor tumani</address>
+            </div>
+
+            <div class="wrapper">
+            <span class="span">Telefon:</span>
+            <a href="tel:+998901234567" class="footer-link">+998 90 123 45 67</a>
+            </div>
+
+            <div class="wrapper">
+            <span class="span">Email:</span>
+            <a href="mailto:info@eduweb.uz" class="footer-link">info@eduweb.uz</a>
+            </div>
+
+        </div>
+
+        <ul class="footer-list">
+            <li><p class="footer-list-title">Onlayn Platforma</p></li>
+            <li><a href="/#about" class="footer-link">Biz haqimizda</a></li>
+            <li><a href="/#courses" class="footer-link">Kurslar</a></li>
+            <li><a href="/#blog" class="footer-link">Instruktorlar</a></li>
+        </ul>
+
+        <ul class="footer-list">
+            <li><p class="footer-list-title">Havolalar</p></li>
+            <li><a href="/#footer" class="footer-link">Aloqa</a></li>
+            <li><a href="#" class="footer-link">Tez orada</a></li>
+        </ul>
+
+        <div id="footer" class="footer-list">
+          <p class="footer-list-title">Aloqa</p>
+
+          <p class="footer-list-text">
+            Biz bilan bog'lanish uchun quyidagi shaklni to'ldiring va biz sizga tez orada javob beramiz.
+          </p>
+
+            <form method="post" action="{% url 'contact_submit' %}" class="newsletter-form">
+            {% csrf_token %}
+            <input type="text" name="name" class="input-field" placeholder="Ismingiz" required>
+            <input type="email" name="email" class="input-field" placeholder="Email manzilingiz" required>
+            <button type="submit" class="btn has-before">
+                <span class="span">Yuborish</span>
+                <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </button>
+            </form>
+
+            {% if messages %}
+            {% for message in messages %}
+                <p style="color: green;">{{ message }}</p>
+            {% endfor %}
+            {% endif %}
+            </div>
+        </div>
+    </div>
+        <div class="footer-bottom">
+            <div class="container">
+            <p class="copyright">
+                © 2024 Barcha huquqlar himoyalangan. <a href="/" class="copyright-link">EduDev</a>
+            </p>
+            </div>
+        </div>
+
+        </footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const searchBtn = document.querySelector(".header-action-btn");
+    const searchContainer = document.getElementById("searchContainer");
+
+    searchBtn.addEventListener("click", () => {
+      if (searchContainer.style.display === "none" || searchContainer.style.display === "") {
+        searchContainer.style.display = "block";
+        searchContainer.querySelector("input").focus();
+      } else {
+        searchContainer.style.display = "none";
+      }
+    });
+  });
+</script>
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back top top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="{%static './assets/js/script.js'%}" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

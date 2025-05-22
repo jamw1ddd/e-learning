@@ -1,0 +1,339 @@
+{% extends "base.html" %}
+{%load static%}
+{%block content%}
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+      <section class="section hero has-bg-image" id="home" aria-label="home"
+              style="background-image: url({% static './assets/images/hero-bg.svg' %})">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <h1 class="h1 section-title">
+              Dasturlash fanidan <span class="span">elektron</span> o‘quv qo‘llanma
+            </h1>
+
+            <p class="hero-text">
+              Ushbu qo‘llanmada dasturlash faniga oid eng yaxshi kurslar va interaktiv mashg‘ulotlar jamlangan.
+              O‘quvchilar zamonaviy bilimlar asosida mustaqil ta’lim olishlari, amaliy topshiriqlarni bajarish orqali
+              ko‘nikmalarini mustahkamlashlari mumkin. Tajribali mutaxassislar tomonidan ishlab chiqilgan bu platforma sizga
+              dasturlash olamiga ishonch bilan qadam qo‘yishingizda yordam beradi.
+            </p>
+
+            <a href="#courses" class="btn has-before">
+              <span class="span">Kurslarni ko‘rish</span>
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </a>
+
+          </div>
+
+          <figure class="hero-banner">
+
+            <div class="img-holder one" style="--width: 270; --height: 300;">
+              <img src="{% static './assets/images/hero-banner-1.jpg' %}" width="270" height="300" alt="Dasturlash kursi" class="img-cover">
+            </div>
+
+            <div class="img-holder two" style="--width: 240; --height: 370;">
+              <img src="{% static './assets/images/hero-banner-2.jpg' %}" width="240" height="370" alt="O‘quv qo‘llanma" class="img-cover">
+            </div>
+
+            {% comment %} <img src="./assets/images/hero-shape-2.png" width="622" height="551" alt="" class="shape hero-shape-2"> {% endcomment %}
+
+          </figure>
+
+        </div>
+      </section>
+
+      <!-- 
+        - #CATEGORY
+      -->
+
+      {% comment %} <section class="section category" aria-label="category">
+        <div class="container">
+
+          <p class="section-subtitle">Bo‘limlar</p>
+
+          <h2 class="h2 section-title">
+            Masofaviy ta’lim uchun <span class="span">onlayn darslar</span>
+          </h2>
+
+          <p class="section-text">
+            Dasturlash faniga oid turli ko‘nikmalarni o‘zlashtirish uchun qulay bo‘limlar.
+          </p>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="category-card" style="--color: 170, 75%, 41%">
+
+                <div class="card-icon">
+                  <img src="{% static './assets/images/category-1.svg' %}" width="40" height="40" loading="lazy"
+                    alt="Onlayn diplom dasturlari" class="img">
+                </div>
+
+                <h3 class="h3">
+                  <a href="#course" class="card-title">Onlayn diplom dasturlari</a>
+                </h3>
+
+                <p class="card-text">
+                  Uzoqdan turib oliy ma’lumot olishni xohlovchilar uchun moslashtirilgan to‘liq o‘quv dasturlari.
+                </p>
+
+                <span class="card-badge">7 ta kurs</span>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="category-card" style="--color: 351, 83%, 61%">
+
+                <div class="card-icon">
+                  <img src="{% static './assets/images/category-2.svg' %}" width="40" height="40" loading="lazy"
+                    alt="Diplomsiz kurslar" class="img">
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Diplomsiz kurslar</a>
+                </h3>
+
+                <p class="card-text">
+                  Maxsus ko‘nikmalarni o‘rganish uchun qisqa muddatli, diplom talab etmaydigan kurslar.
+                </p>
+
+                <span class="card-badge">4 ta kurs</span>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="category-card" style="--color: 229, 75%, 58%">
+
+                <div class="card-icon">
+                  <img src="{% static './assets/images/category-3.svg' %}" width="40" height="40" loading="lazy"
+                    alt="Kampusdan tashqari dasturlar" class="img">
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Kampusdan tashqari dasturlar</a>
+                </h3>
+
+                <p class="card-text">
+                  Moslashuvchan va amaliy tajribaga boy o‘quv uslubini taqdim etuvchi tashqi kurslar.
+                </p>
+
+                <span class="card-badge">8 ta kurs</span>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="category-card" style="--color: 42, 94%, 55%">
+
+                <div class="card-icon">
+                  <img src="{% static './assets/images/category-4.svg' %}" width="40" height="40" loading="lazy"
+                    alt="Gibrid masofaviy kurslar" class="img">
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Gibrid masofaviy kurslar</a>
+                </h3>
+
+                <p class="card-text">
+                  Onlayn va an’anaviy o‘qitish usullarini birlashtirgan to‘liq va samarali o‘quv tajribasi.
+                </p>
+
+                <span class="card-badge">8 ta kurs</span>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section> {% endcomment %}
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="section about" id="about" aria-label="about">
+        <div class="container">
+
+          <figure class="about-banner">
+
+            <div class="img-holder" style="--width: 520; --height: 370;">
+              <img src="{%static './assets/images/about-banner.jpg'%}" width="520" height="370" loading="lazy" alt="about banner"
+                class="img-cover">
+            </div>
+
+            <!-- <img src="./assets/images/about-shape-1.svg" width="360" height="420" loading="lazy" alt=""
+              class="shape about-shape-1">-->
+
+            <img src="{%static './assets/images/about-shape-2.svg'%}" width="371" height="220" loading="lazy" alt=""
+              class="shape about-shape-2">
+
+            <img src="{%static './assets/images/about-shape-3.png'%}" width="722" height="528" loading="lazy" alt=""
+              class="shape about-shape-3">
+
+          </figure>
+
+            <div class="about-content">
+
+              <p class="section-subtitle">Biz haqimizda</p>
+
+              <h2 class="h2 section-title">
+                10 yillik <span class="span">masofaviy ta’lim</span> tajribasi bilan
+              </h2>
+
+              <p class="section-text">
+                EduDev platformasi o‘n yildan ortiq vaqt davomida elektron ta’lim sohasida yetakchi hisoblanadi. Biz sifatli
+                o‘quv materiallari va interaktiv mashg‘ulotlarni taqdim etish orqali o‘quvchilarning bilim va ko‘nikmalarini
+                rivojlantirishga xizmat qilamiz. Platformamiz turli darajadagi foydalanuvchilarning ehtiyojlariga moslab
+                ishlab chiqilgan bo‘lib, ularni kasbiy rivojlanish sari yetaklaydi.
+              </p>
+
+              <ul class="about-list">
+
+                <li class="about-item">
+                  <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+                  <span class="span">Tajribali o‘qituvchilar</span>
+                </li>
+
+                <li class="about-item">
+                  <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+                  <span class="span">Masofaviy onlayn ta’lim</span>
+                </li>
+
+                <li class="about-item">
+                  <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+                  <span class="span">Cheksiz kirish huquqi</span>
+                </li>
+
+              </ul>
+
+              <img src="{% static './assets/images/about-shape-4.svg' %}" width="100" height="100" loading="lazy" alt=""
+                class="shape about-shape-4">
+
+            </div>
+
+        </div>
+      </section>
+
+      <!-- 
+        - #COURSE
+      -->
+
+      <section class="section course" id="courses" aria-label="course">
+        <div class="container">
+
+          <p class="section-subtitle">Ommabop kurslar</p>
+          <h2 class="h2 section-title">Kursni tanlang va boshlang!</h2>
+
+          <ul class="grid-list">
+            {% for kurs in kurslar %}
+            <li>
+              <div class="course-card">
+                <figure class="card-banner img-holder" style="--width: 370px; --height: 220px;">
+                  <a href="{{ kurs.youtube_url }}" target="_blank">
+                    <img src="{{ kurs.youtube_img }}" width="370" height="220" loading="lazy" alt="{{ kurs.nomi }}" class="img-cover">
+                  </a>
+                </figure>
+
+                <div class="abs-badge">
+                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                  <span class="span">{{ kurs.davomiylik }}</span>
+                </div>
+
+                <div class="card-content">
+                  <span class="badge">{{ kurs.daraja|title }}</span>
+                  <h3 class="h3">
+                    <a href="{{ kurs.youtube_url }}" class="card-title">{{ kurs.nomi }}</a>
+                  </h3>
+
+                  <div class="wrapper">
+                    <div class="rating-wrapper">
+                      {% for i in "12345" %}
+                      <ion-icon name="star"></ion-icon>
+                      {% endfor %}
+                    </div>
+                    <p class="rating-text">({{ kurs.baho }} {%if kurs.reyting_izohi%}/ {{ kurs.reyting_izohi }}{%endif%})</p>
+                  </div>
+
+                  <a href="{{ kurs.youtube_url }}">
+                    <data class="price" value="0">Bepul o‘rganing</data>
+                  </a>
+
+                  <ul class="card-meta-list">
+                    <li class="card-meta-item">
+                      <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+                      <span class="span">{{ kurs.tomoshabinlar_soni }}</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+
+          <a href="{% url 'kurslar' %}" class="btn has-before">
+            <span class="span">Boshqa kurslarni ko‘rish</span>
+            <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- 
+        - #BLOG
+      -->
+      <section id="blog" class="section blog" aria-label="books">
+        <div class="container">
+
+          <p class="section-subtitle">Elektron Kitoblar</p>
+          <h2 class="h2 section-title">Dasturlash faniga oid eng so‘nggi elektron qo‘llanmalar</h2>
+
+          <ul class="grid-list">
+            {% for kitob in kitoblar %}
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 370; --height: 220;">
+                  <img src="{{ kitob.rasm.url }}" width="370" height="220" loading="lazy" alt="{{ kitob.nomi }}"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <h3 class="h3">
+                    <span class="card-title">{{ kitob.nomi }}</span>
+                  </h3>
+
+                  <p class="card-text">
+                    {{ kitob.tavsif }}
+                  </p>
+
+                  <a href="{{ kitob.fayl.url }}" class="btn has-before" download>
+                    <span class="span">Yuklab olish</span>
+                    <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
+                  </a>
+                </div>
+
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+
+            <a href="{% url 'kitoblarr' %}" class="btn has-before">
+            <span class="span">Boshqa elektron qo'llanmalarni ko'rish</span>
+            <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </a>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+{%endblock content%}

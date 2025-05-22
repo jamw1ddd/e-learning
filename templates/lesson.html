@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{%load static%}
+{%block content%}
+
+      <section class="section course" id="courses" aria-label="course">
+        <div class="container">
+
+          <p class="section-subtitle">Ommabop kurslar</p>
+          <h2 class="h2 section-title">Kursni tanlang va boshlang!</h2>
+
+          <ul class="grid-list">
+            {% for kurs in kurslar %}
+            <li>
+              <div class="course-card">
+                <figure class="card-banner img-holder" style="--width: 370px; --height: 220px;">
+                  <a href="{{ kurs.youtube_url }}" target="_blank">
+                    <img src="{{ kurs.youtube_img }}" width="370" height="220" loading="lazy" alt="{{ kurs.nomi }}" class="img-cover">
+                  </a>
+                </figure>
+
+                <div class="abs-badge">
+                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                  <span class="span">{{ kurs.davomiylik }}</span>
+                </div>
+
+                <div class="card-content">
+                  <span class="badge">{{ kurs.daraja|title }}</span>
+                  <h3 class="h3">
+                    <a href="{{ kurs.youtube_url }}" class="card-title">{{ kurs.nomi }}</a>
+                  </h3>
+
+                  <div class="wrapper">
+                    <div class="rating-wrapper">
+                      {% for i in "12345" %}
+                      <ion-icon name="star"></ion-icon>
+                      {% endfor %}
+                    </div>
+                    <p class="rating-text">({{ kurs.baho }} {%if kurs.reyting_izohi%}/ {{ kurs.reyting_izohi }}{%endif%})</p>
+                  </div>
+
+                  <a href="{{ kurs.youtube_url }}">
+                    <data class="price" value="0">Bepul o‘rganing</data>
+                  </a>
+
+                  <ul class="card-meta-list">
+                    <li class="card-meta-item">
+                      <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+                      <span class="span">{{ kurs.tomoshabinlar_soni }}</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+
+          <a href="{% url 'home' %}" class="btn has-before">
+            <span class="span">Bosh sahifaga qaytish</span>
+            <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+          </a>
+
+        </div>
+      </section>
+
+{%endblock content%}
